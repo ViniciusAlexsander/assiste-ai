@@ -13,7 +13,13 @@ onload = () => {
     if (e.key == "Enter") alteraFilme();
   };
 
-  document.querySelector("#btnAdic").onclick = () => {
+  document.querySelector("#btnAdicAssistir").onclick = () => {
+    document.querySelector("#btnInc").disabled = true;
+    ativa("tela2");
+    document.querySelector("#inputNovoFilme").focus();
+  };
+
+  document.querySelector("#btnAdicAssistidos").onclick = () => {
     document.querySelector("#btnInc").disabled = true;
     ativa("tela2");
     document.querySelector("#inputNovoFilme").focus();
@@ -114,7 +120,7 @@ const adicionaFilme = () => {
     check.checked = false;
     ativa("tela1");
     salvaFilmes();
-    mostraFilmes("listaDeFilmesAssistir");
+    mostraFilmes("listaDeFilmesAssistir", "blankAssistir");
   }
 };
 
@@ -137,7 +143,7 @@ const alteraFilme = () => {
   campo.removeAttribute("data-id");
   ativa("tela1");
   salvaFilmes();
-  mostraFilmes("listaDeFilmesAssistir");
+  mostraFilmes("listaDeFilmesAssistir", "blankAssistir");
 };
 
 const apagaFilme = () => {
@@ -150,7 +156,7 @@ const apagaFilme = () => {
   campo.removeAttribute("data-id");
   ativa("tela1");
   salvaFilmes();
-  mostraFilmes("listaDeFilmesAssistir");
+  mostraFilmes("listaDeFilmesAssistir", "blankAssistir");
 };
 
 const monitoraCampoAlt = (e) => {
@@ -162,5 +168,3 @@ const monitoraCampoAlt = (e) => {
 const salvaFilmes = () => {
   localStorage.setItem("filmes", JSON.stringify(filmes));
 };
-
-// navigator.serviceWorker.register("./toferrado-sw.js");

@@ -1,12 +1,12 @@
 {
-  "name": "Tô Ferrado - Gestão de Tarefas",
-  "short_name": "Tô Ferrado",
+  "name": "Assiste ai - Gestão de filmes",
+  "short_name": "Assiste ai",
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#3b78ac",
+  "theme_color": "#f44336",
   "background_color": "white",
   "orientation": "portrait",
-  "description": "Aplicação web simples e objetiva para gestão de tarefas",
+  "description": "Aplicação web simples e objetiva para gestão de filmes",
   "icons": [
     {
       "src": "./assets/appicons/android-icon-48x48.png",

@@ -1,7 +1,5 @@
-// Define o nome do cache atual, considerando a sua versão.
-var cacheName = "toferrado-v1.0";
+var cacheName = "assisteai-v1.0";
 
-// Armazena todos os arquivos no cache atual
 self.addEventListener("install", function (event) {
   caches.open(cacheName).then((cache) => {
     cache.addAll([
@@ -32,8 +30,6 @@ self.addEventListener("install", function (event) {
   });
 });
 
-// Recupera todos os nomes de cache e apaga aqueles
-// que forem diferentes do cache atual
 self.addEventListener("activate", (e) => {
   e.waitUntil(
     caches.keys().then((keyList) => {
@@ -48,9 +44,6 @@ self.addEventListener("activate", (e) => {
   );
 });
 
-// Tenta servir o arquivo do cache atual. Se não for possível,
-// baixa o recurso da web e o armazena localmente, antes de entregar
-// uma cópia para o usuário.
 self.addEventListener("fetch", function (event) {
   let resposta = caches.open(cacheName).then((cache) => {
     return cache.match(event.request).then((recurso) => {

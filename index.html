@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="./assisteai.css" />
     <script src="./script.js"></script>
     <script src="./assisteai.js"></script>
+    <script>
+      navigator.serviceWorker.register("./assisteai-sw.js");
+    </script>
   </head>
   <body>
     <header class="headerBar">
@@ -51,7 +54,7 @@
     <div id="tela1" class="component">
       <div class="componentHeader">
         <h1 class="componentTitle">Meus filmes - Para assistir</h1>
-        <button id="btnAdic" class="button primary">
+        <button id="btnAdicAssistir" class="button primary">
           <img src="./assets/plus1.png" />
         </button>
       </div>
@@ -114,7 +117,7 @@
     <div id="tela4" class="component hidden">
       <div class="componentHeader">
         <h1 class="componentTitle">Meus filmes - Já assistidos</h1>
-        <button id="btnAdic" class="button primary">
+        <button id="btnAdicAssistidos" class="button primary">
           <img src="./assets/plus1.png" />
         </button>
       </div>
