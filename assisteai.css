@@ -1,0 +1,17 @@
+.blank {
+  text-align: center;
+  padding-top: 5rem;
+  width: 100%;
+  opacity: 0.25;
+}
+
+.blank * {
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

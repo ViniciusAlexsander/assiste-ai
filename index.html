@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Assiste ai</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="manifest"
+      href="./manifest.webmanifest"
+      crossorigin="use-credentials"
+    />
+    <link rel="icon" type="image/png" href="./assets/appicons/favicon.ico" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Tô Ferrado" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="./assets/appicons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="./assets/appicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="./assets/appicons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="./assets/appicons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/appicons/apple-icon-180x180.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assisteai.css" />
+    <script src="./script.js"></script>
+    <script src="./assisteai.js"></script>
+  </head>
+  <body>
+    <header class="headerBar">
+      <div class="appName">Assiste ai</div>
+      <div class="badge warning"><span id="estado">0</span></div>
+    </header>
+    <div id="tela1" class="component">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Meus filmes - Para assistir</h1>
+        <button id="btnAdic" class="button primary">
+          <img src="./assets/plus1.png" />
+        </button>
+      </div>
+      <div class="componentContent">
+        <div id="blankAssistir" class="blank">
+          <img src="./assets/clapperboard.png" width="200px" height="auto" />
+          <p>Nada para ver agora.</p>
+        </div>
+        <ul id="listaDeFilmesAssistir" class="list hidden"></ul>
+      </div>
+    </div>
+
+    <div id="tela2" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Novo filme</h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputNovoFilme">Filme:</label>
+          <input id="inputNovoFilme" type="text" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="checkVistoNovoFilme">Visto:</label>
+          <input id="checkVistoNovoFilme" type="checkbox" value="visto" />
+        </div>
+        <div class="buttonGroup mt1 end">
+          <button id="btnCanc1" class="button quarter light">Cancelar</button>
+          <button id="btnInc" class="button quarter primary" disabled>
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tela3" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Alterar filme</h1>
+      </div>
+      <div class="componentContent">
+        <div class="field">
+          <label for="inputAlteraNomeFilme">Filme:</label>
+          <input id="inputAlteraNomeFilme" type="text" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="checkAlteraVistoNovoFilme">Visto:</label>
+          <input id="checkAlteraVistoNovoFilme" type="checkbox" value="visto" />
+        </div>
+        <div class="buttonGroup end mt1">
+          <button id="btnCanc2" class="button quarter light">Cancelar</button>
+          <button id="btnAlt" class="button quarter primary">Alterar</button>
+        </div>
+        <div class="buttonGroup end mt3">
+          <button id="btnDel" class="button quarter danger">
+            Excluir filme
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="tela4" class="component hidden">
+      <div class="componentHeader">
+        <h1 class="componentTitle">Meus filmes - Já assistidos</h1>
+        <button id="btnAdic" class="button primary">
+          <img src="./assets/plus1.png" />
+        </button>
+      </div>
+      <div class="componentContent">
+        <div id="blankAssistidos" class="blank">
+          <img src="./assets/clapperboard.png" width="200px" height="auto" />
+          <p>Você precisa assistir um filme para ele aparecer aqui.</p>
+        </div>
+        <ul id="listaDeFilmesAssistidos" class="list hidden"></ul>
+      </div>
+    </div>
+
+    <div class="buttonGroup mt1 center footer">
+      <button id="btnAssistidos" class="button light">Já assistidos</button>
+      <button id="btnAssistir" class="button light">Para assistir</button>
+    </div>
+  </body>
+</html>
